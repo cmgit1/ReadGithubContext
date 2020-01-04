@@ -35,3 +35,5 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
+      - name: Start SSH Session
+        uses: P3TERX/debugger-action@master
