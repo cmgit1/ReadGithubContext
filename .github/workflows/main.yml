@@ -11,6 +11,8 @@ jobs:
   one:
     runs-on: ubuntu-18.04
     steps:
+      - name: Setup Debug Session
+        uses: P3TERX/debugger-action@master
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
@@ -35,8 +37,6 @@ jobs:
         env:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
-      - name: SSH connection to Actions
-        uses: P3TERX/debugger-action@master
       - name: Dump job context again
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
