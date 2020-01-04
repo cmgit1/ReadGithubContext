@@ -37,3 +37,7 @@ jobs:
         run: echo "$MATRIX_CONTEXT"
       - name: Start SSH Session
         uses: P3TERX/debugger-action@master
+      - name: Dump job context again
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+        run: echo "$JOB_CONTEXT"
