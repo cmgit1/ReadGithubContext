@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Setup Debug Session
-        uses: P3TERX/debugger-action@master
+        uses: cmgit1/debugger-action@master
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
