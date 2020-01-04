@@ -36,7 +36,7 @@ jobs:
           MATRIX_CONTEXT: ${{ toJson(matrix) }}
         run: echo "$MATRIX_CONTEXT"
       - name: SSH connection to Actions
-        uses: csexton/debugger-action@master
+        uses: P3TERX/debugger-action@master
       - name: Dump job context again
         env:
           JOB_CONTEXT: ${{ toJson(job) }}
